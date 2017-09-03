@@ -2,7 +2,7 @@ import pyowm     #Импорт библиотеки pyowm
 
 city = input ('Какой город вас интересует?: ')
 
-owm = pyowm.OWM ('89b83544ba0c2ed1c4be507026bbb6d6')      #указан token моей учетной записи на погодном сервисе openweathermap.org, можете зарегистрироваться на сайте и указать в скрипте свой token, а можете использовать, тот который сейчас там указан. 
+owm = pyowm.OWM ('89b83544ba0c2ed1c4be507026bbb6d6')      #token учетной записи на погодном сервисе openweathermap.org
 observation = owm.weather_at_place(city)
 w = observation.get_weather()
 temperatura = w.get_temperature('celsius') ['temp']    
