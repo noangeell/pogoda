@@ -1,11 +1,11 @@
-import pyowm
+import pyowm     #Импорт библиотеки pyowm
 
 city = input ('Какой город вас интересует?: ')
 
-owm = pyowm.OWM ('89b83544ba0c2ed1c4be507026bbb6d6')
+owm = pyowm.OWM ('89b83544ba0c2ed1c4be507026bbb6d6')      #указан token моей учетной записи на погодном сервисе openweathermap.org, можете зарегистрироваться на сайте и указать в скрипте свой token, а можете использовать, тот который сейчас там указан. 
 observation = owm.weather_at_place(city)
 w = observation.get_weather()
-temperatura = w.get_temperature('celsius') ['temp'] 
+temperatura = w.get_temperature('celsius') ['temp']    
 veter = w.get_wind()
 vlash = w.get_humidity()
 detalstat = w.get_detailed_status()
@@ -13,3 +13,4 @@ print ("В городе " + city + "," + " " + "сейчас температу�
 print ( "Направление и скорость ветра" + " " + str (veter) )
 print ("Влажность в городе" + " " + city + " " + str (vlash) )
 print ( detalstat + "\n" + "На сегодня все, спасибо за пользование программы!)")
+
